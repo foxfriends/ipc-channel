@@ -518,7 +518,7 @@ fn transfer_closed_sender() {
 fn test_receiver_stream() {
     use futures::task::Context;
     use futures::Stream;
-    use futures::Poll;
+    use std::task::Poll;
     use std::pin::Pin;
     let (tx, rx) = ipc::channel().unwrap();
     let (waker, count) = futures_test::task::new_count_waker();
