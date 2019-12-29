@@ -68,7 +68,7 @@ lazy_static! {
                     while let Ok(Some((receiver, sender))) = recv.try_next() {
                         if let Ok(id) = receivers.add_opaque(receiver) {
                             senders.insert(id, sender);
-			}
+                        }
                     }
                 }
             }
